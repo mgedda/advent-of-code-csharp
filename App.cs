@@ -91,10 +91,10 @@ namespace AdventOfCode
                > Usage: dotnet run [arguments]
                > Supported arguments:
 
-               >  [year]/[day]   Solve the specified problems
-               >  [year]         Solve the whole year
-               >  last           Solve the last problem
-               >  all            Solve everything
+               >  [year]/[day]          Solve the specified problems
+               >  [year]                Solve the whole year
+               >  last                  Solve the last problem
+               >  all                   Solve everything
 
                > To start working on new problems:
                > run the app with
