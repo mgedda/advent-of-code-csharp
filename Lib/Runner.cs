@@ -64,8 +64,8 @@ namespace AdventOfCode
             {
                 if (lastYear != solver.Year())
                 {
-                    Console.WriteLine($@"{solver.Year()}
-                    >".StripMargin());
+                    Console.WriteLine($@"[{solver.Year()}]
+                    >".StripMargin(">"));
                     lastYear = solver.Year();
                 }
 
