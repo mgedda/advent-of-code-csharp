@@ -28,7 +28,7 @@ namespace AdventOfCode.Y2020.Day02
                 return count >= low && count <= high ? 1 : 0;
             }
 
-            IEnumerable<int> validPasswordFlags = input.Split("\n").Select(CheckPasswordValidity);
+            IEnumerable<int> validPasswordFlags = input.Split("\r\n").Select(CheckPasswordValidity);
             return validPasswordFlags.Sum();
         }
 
@@ -45,7 +45,7 @@ namespace AdventOfCode.Y2020.Day02
                 return password[i1 - 1] == letter ^ password[i2 - 1] == letter ? 1 : 0;
             }
 
-            IEnumerable<int> validPasswordFlags = input.Split("\n").Select(CheckPasswordValidity);
+            IEnumerable<int> validPasswordFlags = input.Split("\r\n").Select(CheckPasswordValidity);
             return validPasswordFlags.Sum();
         }
     }

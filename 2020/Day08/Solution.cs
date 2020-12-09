@@ -68,7 +68,7 @@ namespace AdventOfCode.Y2020.Day08
 
         private ImmutableArray<Instruction> ParseInput(string input)
         {
-            return input.Split("\n").Select(row => new Instruction { Code = row.Split(' ')[0], Value = int.Parse(row.Split(' ')[1]) } ).ToImmutableArray();
+            return input.Split("\r\n").Select(row => new Instruction { Code = row.Split(' ')[0], Value = int.Parse(row.Split(' ')[1]) } ).ToImmutableArray();
         }
     }
 

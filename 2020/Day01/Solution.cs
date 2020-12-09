@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Collections.Immutable;
 using System.Linq;
@@ -30,7 +31,7 @@ namespace AdventOfCode.Y2020.Day01
                 return ComputeResult(tail);
             }
 
-            ImmutableList<long> values = input.Split("\n").Select(l => long.Parse(l)).ToImmutableList();
+            ImmutableList<long> values = input.Split("\r\n").Select(l => long.Parse(l)).ToImmutableList();
             return ComputeResult(values);
         }
 
@@ -56,7 +57,7 @@ namespace AdventOfCode.Y2020.Day01
                 return ComputeResult(tail);
             }
 
-            ImmutableList<long> values = input.Split("\n").Select(l => long.Parse(l)).ToImmutableList();
+            ImmutableList<long> values = input.Split("\r\n").Select(l => long.Parse(l)).ToImmutableList();
             return ComputeResult(values);
         }
     }
