@@ -13,24 +13,9 @@ namespace AdventOfCode.Y2020.Day03
             yield return PartTwo(input);
         }
 
-        int PartOne(string input)
+        long PartOne(string input)
         {
-            (int slopeX, int slopeY) = (3, 1);
-
-            string[] lines = input.Split("\r\n");
-            TreeMap treeMap = new TreeMap(lines);
-            //treeMap.Print();
-
-            int steps = (treeMap.ys - 1) / slopeY;
-            IEnumerable<(int, int)> stepCoords = Enumerable.Range(1, steps).Select(step => (step * slopeX, step * slopeY));
-            //treeMap.PrintWithPositions(stepCoords);
-            
-            IEnumerable<int> trees = stepCoords.Select(c => treeMap.Get(c));
-            int result = trees.Sum();
-
-            return result;
-
-            //return CountTrees(input.Split("\n"), (3, 1));
+            return CountTrees(input.Split("\r\n"), (3, 1));
         }
 
         long PartTwo(string input)
@@ -46,14 +31,11 @@ namespace AdventOfCode.Y2020.Day03
         long CountTrees(string[] lines, (int, int) slope)
         {
             (int slopeX, int slopeY) = slope;
-
             TreeMap treeMap = new TreeMap(lines);
             //treeMap.Print();
-
             int steps = (treeMap.ys - 1) / slopeY;
             IEnumerable<(int, int)> stepCoords = Enumerable.Range(1, steps).Select(step => (step * slopeX, step * slopeY));
             IEnumerable<long> trees = stepCoords.Select(c => (long)treeMap.Get(c));
-
             //treeMap.PrintWithPositions(stepCoords);
 
             return trees.Sum();
