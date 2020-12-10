@@ -6,7 +6,7 @@ namespace AdventOfCode
 {
     class Updater
     {
-        public async Task Update(int year, int day)
+        public Task Update(int year, int day)
         {
             var dir = Dir(year, day);
             if (!Directory.Exists(dir))
@@ -17,6 +17,7 @@ namespace AdventOfCode
             UpdateInput(year, day);
             UpdateRefout(year, day);
             UpdateSolutionTemplate(year, day);
+            return Task.CompletedTask;
         }
 
         void WriteFile(string file, string content)
