@@ -104,8 +104,8 @@ namespace AdventOfCode
                             var (status, err) = refout == null || refout.Length <= iline
                                 ? ("?", null) 
                                 : refout [iline] == line.ToString()
-                                    ? ("correct", null)
-                                    : ("wrong", $"{solver.DayName()}: In line {iline + 1} expected '{refout[iline]}' but found '{line}'");
+                                    ? ("PASS", null)
+                                    : ("FAIL", $"{solver.DayName()}: In line {iline + 1} expected '{refout[iline]}' but found '{line}'");
                         
                             if (err != null)
                             {
